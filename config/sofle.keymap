@@ -19,6 +19,23 @@
 };
 
 / {
+    behaviors {
+        // Swapper for smart alt+tab
+        swapper: swapper {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LALT>, <&kp TAB>;
+            ignored-key-positions = <SWP_POS RM1 RM2 RM3 RT2>;
+        };
+        swapperrev: swapperrev {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LALT>, <&kp TAB>, <&kp LSHIFT>;
+            ignored-key-positions = <SWP_POS RM1 RM2 RM3 RT2>;
+        };
+    };
+
+/ {
 
     keymap {
         compatible = "zmk,keymap";
@@ -38,7 +55,7 @@
                  &kp LCTRL &kp LGUI &kp LALT &mo 1  &kp SPACE  &kp RET    &mo 2  &kp RALT &kp RGUI  &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LA(TAB) LS(LA(TAB))>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp &swapper &swapperrev>;
         };
 
         raise_layer {
