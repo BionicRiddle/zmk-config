@@ -21,6 +21,7 @@
 / {
     behaviors {
         swapper: swapper {
+            #binding-cells = <0>;
             compatible = "zmk,behavior-tri-state";
             timeout-ms = <300>;
             bindings = <&kp LALT>, <&kp TAB>;
