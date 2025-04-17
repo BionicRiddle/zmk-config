@@ -20,10 +20,10 @@
 
 / {
     behaviors {
-        // Swapper for smart alt+tab
         swapper: swapper {
-            compatible = "zmk,behavior-smart-toggle";
+            compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
+            timeout-ms = 300;
             bindings = <&kp LALT>, <&kp TAB>;
             #ignored-key-positions = <SWP_POS RM1 RM2 RM3 RT2>;
         };
