@@ -34,7 +34,7 @@
         };
         
         swapper: swapper {
-            #binding-cells = <0>;
+            #sensor-binding-cells = <0>;
             compatible = "zmk,behavior-tri-state";
             timeout-ms = <600>;
             bindings = <&kt_on LALT>, <&kp TAB>, <&kt_off LALT>;
