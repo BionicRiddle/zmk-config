@@ -37,7 +37,7 @@
             #binding-cells = <0>;
             compatible = "zmk,behavior-tri-state";
             timeout-ms = <300>;
-            bindings = <&kt_on LALT>, <&kp TAB>, <&kt_off LALT>;
+            bindings = <&kp A>, <&kp B>, <&kp C>;
             // ignored-key-positions = <SWP_POS RM1 RM2 RM3 RT2>;
         };
         
