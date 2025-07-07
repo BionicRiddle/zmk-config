@@ -19,50 +19,6 @@
 };
 
 / {
-    macros {
-        alt_tab_prev_macro: alt_tab_prev_macro {
-            label = "ALT_TAB_PREV_MACRO";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&alt_tab_prev>;
-        };
-
-        alt_tab_next_macro: alt_tab_next_macro {
-            label = "ALT_TAB_NEXT_MACRO";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&alt_tab_next>;
-        };
-    };
-
-    behaviors {
-        kt_on: key_toggle_on_only {
-            compatible = "zmk,behavior-key-toggle";
-            #binding-cells = <1>;
-            display-name = "Key Toggle On";
-            toggle-mode = "on";
-        };
-        kt_off: key_toggle_off_only {
-            compatible = "zmk,behavior-key-toggle";
-            #binding-cells = <1>;
-            display-name = "Key Toggle Off";
-            toggle-mode = "off";
-        };
-        
-        alt_tab_next: alt_tab_next {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-tri-state";
-            timeout-ms = <600>;
-            bindings = <&kt_on LALT>, <&kp TAB>, <&kt_off LALT>;
-        };
-        alt_tab_prev: alt_tab_prev {
-            #binding-cells = <0>;
-            compatible = "zmk,behavior-tri-state";
-            timeout-ms = <600>;
-            bindings = <&kt_on LALT>, <&kp TAB>, <&kt_off LALT>;
-        };
-        
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -82,7 +38,7 @@
                  &kp LCTRL &kp LGUI &kp LALT &mo 1  &kp SPACE  &kp RET    &mo 2  &kp RALT &kp RGUI  &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp &alt_tab_next_macro &alt_tab_prev_macro>;
+            sensor-bindings = <&inc_dec_kp F20 F21 &inc_dec_kp F22 F23>;
         };
 
         raise_layer {
@@ -100,7 +56,7 @@
                     &trans    &trans    &trans       &trans      &trans &trans  &mo 3        &trans        &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LA(TAB) LS(LA(TAB))>;
+            sensor-bindings = <&inc_dec_kp F20 F21 &inc_dec_kp F22 F23>;
         };
 
         lower_layer {
@@ -118,7 +74,7 @@
                            &trans           &trans            &trans    &mo 3         &trans  &trans    &trans        &trans       &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LA(TAB) LS(LA(TAB))>;
+            sensor-bindings = <&inc_dec_kp F20 F21 &inc_dec_kp F22 F23>;
         };
 
         special_layer {
@@ -136,7 +92,7 @@
                                    &trans            &trans       &trans       &trans           &trans  &trans     &trans          &trans             &trans       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LA(TAB) LS(LA(TAB))>;
+            sensor-bindings = <&inc_dec_kp F20 F21 &inc_dec_kp F22 F23>;
         };
     };
 };
