@@ -21,8 +21,6 @@
     bindings = <BINDINGS>; \
   };
 
-MACRO(me, &macro_tap &kp M &kp E &macro_press &kp LALT &macro_tap &kp KP_N2 &macro_release &kp LALT &macro_tap &kp A &kp L &kp B &kp I &kp N &kp K &kp A &kp R &kp L &kp S &kp S &kp O &kp N &kp DOT &kp S &kp E)
-
 
 &gpio0 {
     extpwr_pull: extpwr_pull {
@@ -34,6 +32,8 @@ MACRO(me, &macro_tap &kp M &kp E &macro_press &kp LALT &macro_tap &kp KP_N2 &mac
 };
 
 / {
+
+    MACRO(me, &macro_tap &kp M &kp E &macro_press &kp LALT &macro_tap &kp KP_N2 &macro_release &kp LALT &macro_tap &kp A &kp L &kp B &kp I &kp N &kp K &kp A &kp R &kp L &kp S &kp S &kp O &kp N &kp DOT &kp S &kp E)
 
     keymap {
         compatible = "zmk,keymap";
