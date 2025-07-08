@@ -20,6 +20,78 @@
 
 / {
 
+    macros {
+        email_me: macro_0 {
+            compatible = "zmk,behavior-macro";
+            label = "EMAIL_ME";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap
+                "me@albinkarlsson.se"
+            >;
+        };
+
+        email_p: macro_1 {
+            compatible = "zmk,behavior-macro";
+            label = "EMAIL_P";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap
+                "@albinkarlsson.se"
+            >;
+        };
+
+        email_riddle: macro_2 {
+            compatible = "zmk,behavior-macro";
+            label = "EMAIL_RIDDLE";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap
+                "riddle.agk@gmail.com"
+            >;
+        };
+
+        email_cpac: macro_3 {
+            compatible = "zmk,behavior-macro";
+            label = "EMAIL_CPAC";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap
+                "albin.karlsson@cpacsystems.se"
+            >;
+        };
+
+        email_volvo: macro_4 {
+            compatible = "zmk,behavior-macro";
+            label = "EMAIL_VOLVO";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap
+                "albin.karlsson@consultant.volvo.com"
+            >;
+        };
+
+        email_chalmers: macro_5 {
+            compatible = "zmk,behavior-macro";
+            label = "EMAIL_CHALMERS";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap
+                "albkar@chalmers.se"
+            >;
+        };
+
+        email_abbenano: macro_5 {
+            compatible = "zmk,behavior-macro";
+            label = "EMAIL_ABBENANO";
+            #binding-cells = <0>;
+            bindings = <
+                &macro_tap
+                "abbenano.13@gmail.com"
+            >;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -86,10 +158,10 @@
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &bt BT_CLR       &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                        &none           &none              &out OUT_BLE &out OUT_USB &none           &studio_unlock
-&none            &none             &none             &none        &none        &none                               &none           &none              &none        &none        &none           &none
-&none            &none             &none             &none        &none        &none                               &none           &none              &none        &none        &none           &none
-&none            &none             &none             &none        &none        &none            &trans  &trans     &none           &none              &none        &none        &none           &none
-                                   &trans            &trans       &trans       &trans           &trans  &trans     &trans          &trans             &trans       &trans
+&none            &none             &none             &none        &email_riddle &none                               &none           &none              &none        &none        &email_p        &none
+&none            &email_abbenano   &email_chalmers   &none        &none         &none                               &none           &none              &none        &none        &none           &none
+&none            &none             &none             &email_cpac  &email_volvo  &none            &trans  &trans     &none           &email_me          &none        &none        &none           &none
+                                   &trans            &trans       &trans        &trans           &trans  &trans     &trans          &trans             &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp F20 F21 &inc_dec_kp F22 F23>;
