@@ -54,7 +54,6 @@
         };
 
         EMACRO(me, &macro_tap &kp M &kp E, &macro_tap &kp A &kp L &kp B &kp I &kp N &kp K &kp A &kp R &kp L &kp S &kp S &kp O &kp N &kp DOT &kp S &kp E)
-        EMACRO(p,, &macro_tap &kp A &kp L &kp B &kp I &kp N &kp K &kp A &kp R &kp L &kp S &kp S &kp O &kp N &kp DOT &kp S &kp E)
         EMACRO(riddle, &macro_tap &kp R &kp I &kp D &kp D &kp L &kp E &kp DOT &kp A &kp G &kp K, &macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M)
         EMACRO(cpac, &macro_tap &kp A &kp L &kp B &kp I &kp N &kp DOT &kp K &kp A &kp R &kp L &kp S &kp S &kp O &kp N, &macro_tap &kp C &kp P &kp A &kp C &kp S &kp Y &kp S &kp T &kp E &kp M &kp S &kp DOT &kp S &kp E)
         EMACRO(volvo, &macro_tap &kp A &kp L &kp B &kp I &kp N &kp DOT &kp K &kp A &kp R &kp L &kp S &kp S &kp O &kp N &kp DOT &kp N9, &macro_tap &kp C &kp O &kp N &kp S &kp U &kp L &kp T &kp A &kp N &kp T &kp DOT &kp V &kp O &kp L &kp V &kp O &kp DOT &kp C &kp O &kp M)
