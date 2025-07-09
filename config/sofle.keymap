@@ -16,8 +16,8 @@
     label = EXPAND_AND_STRINGIFY(mcr_##NAME); \
     compatible = "zmk,behavior-macro"; \
     #binding-cells = <0>; \
-    wait-ms = <40>; \
-    tap-ms = <40>; \
+    wait-ms = <20>; \
+    tap-ms = <20>; \
     bindings = <BINDINGS>; \
   };
 
@@ -40,7 +40,7 @@
         MACRO(chalmers, &macro_tap &kp A &kp L &kp B &kp K &kp A &kp R &macro_press &kp RALT &macro_tap &kp N2 &macro_release &kp RALT &macro_tap &kp C &kp H &kp A &kp L &kp M &kp E &kp R &kp S &kp DOT &kp S &kp E)
         MACRO(abbenano, &macro_tap &kp A &kp B &kp B &kp E &kp N &kp A &kp N &kp O &kp DOT &kp N1 &kp N3 &macro_press &kp RALT &macro_tap &kp N2 &macro_release &kp RALT &macro_tap &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M)
     };
-    
+
     keymap {
         compatible = "zmk,keymap";
 
